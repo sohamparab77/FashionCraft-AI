@@ -10,7 +10,7 @@ The pipeline also integrates the remove.bg API to seamlessly isolate the subject
 <img width="1919" height="1026" alt="image" src="https://github.com/user-attachments/assets/bc6e6ac8-e9d8-4433-a7f5-a7e7c5da4d52" />
 
 <details>
-<summary><strong>🔍 Click to expand and view output screenshots</strong></summary>
+<summary><h3>🔍 Click to expand and view output screenshots</h3></summary>
   <img width="1915" height="1017" alt="image" src="https://github.com/user-attachments/assets/16018ef1-5ec3-488d-82a1-842ad46be668" />
   <img width="1919" height="1046" alt="image" src="https://github.com/user-attachments/assets/a75504df-2a1a-408e-afe4-52edf46113f0" />
   <img width="1911" height="1004" alt="image" src="https://github.com/user-attachments/assets/4cf67786-85ec-47c3-afd9-275a1af3bd3b" />
