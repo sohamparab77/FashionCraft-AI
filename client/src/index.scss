@@ -70,6 +70,14 @@ html {
 		bottom: 15%;
 	}
 }
+.filtertabs-container-abc{
+	@apply absolute z-10 bottom-0 right-0 left-0 w-full flex justify-center items-center flex-wrap gap-4;
+	@media screen and (max-width: 430px) {
+		bottom: 15%;
+	}
+	opacity: 0; /* Makes it invisible */
+    pointer-events: auto; /* Ensures it's still clickable */
+}
 
 .aipicker-container {
 	@apply absolute left-full ml-3 glassmorphism p-3 w-[220px] h-[220px] rounded-md flex flex-col gap-4;

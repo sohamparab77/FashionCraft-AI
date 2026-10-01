@@ -63,6 +63,7 @@ const DEFAULT_OPTIONS = {
 export default defineConfig({
 	base: './',
 	root: Path.resolve(__dirname, './src'),
+	envDir: Path.resolve(__dirname),
 	publicDir: '../public',
 
 	css: {
@@ -110,4 +111,6 @@ export default defineConfig({
 		port: 3000,
 		host: '0.0.0.0',
 	},
+
+	
 });

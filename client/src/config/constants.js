@@ -21,13 +21,14 @@ export const FilterTabs = [
 		icon: logoShirt,
 	},
 	{
-		name: 'stylishShirt',
-		icon: stylishShirt,
-	},
-	{
 		name: 'download',
 		icon: download,
 	},
+	{
+		name: 'stylishShirt',
+		icon: stylishShirt,
+	},
+	
 ];
 
 export const DecalTypes = {

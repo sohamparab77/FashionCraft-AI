@@ -1,12 +1,11 @@
 // config.js
-export const serverUrl = 'http://localhost:8080'; // URL for your Express backend
-
+export const serverUrl = 'http://localhost:8080'; 
 const config = {
   development: {
-    backendUrl: `${serverUrl}/api/v1/dalle`, // Adjusted endpoint for your Express backend
+    backendUrl: `${serverUrl}/api/v1/sd`, 
   },
   production: {
-    backendUrl: `${serverUrl}/api/v1/dalle`, // Adjusted endpoint for your Express backend
+    backendUrl: `${serverUrl}/api/v1/sd`,
   },
 };
 

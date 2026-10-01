@@ -1,27 +1,57 @@
 import html2canvas from 'html2canvas';
 
 export const getScreenshot = tabName => {
-	switch (tabName) {
-		case 'download':
-			const captureElement = document.querySelector('.capture');
-			const date = Math.floor(Date.now() / 100);
+    console.log("getScreenshot function called with tabName:", tabName);
 
-			html2canvas(captureElement)
-				.then(canvas => {
-					canvas.style.display = 'none';
-					document.body.appendChild(canvas);
-					return canvas;
-				})
-				.then(canvas => {
-					const image = canvas.toDataURL('image/png');
-					const a = document.createElement('a');
-					a.setAttribute('download', `my-tshirt-design-${date}.png`);
-					a.setAttribute('href', image);
-					a.click();
-					canvas.remove();
-				});
-			break;
-	}
+    switch (tabName) {
+        case 'download':
+            console.log("Attempting to capture screenshot...");
+
+            // Select the element to capture
+            const captureElement = document.querySelector('.capture');
+            console.log("Selected capture element:", captureElement);
+
+            // Check if the element exists
+            if (!captureElement) {
+                console.error("Element with class '.capture' not found.");
+                return;
+            }
+
+            // Generate a unique filename
+            const date = Math.floor(Date.now() / 100);
+            console.log("Generated filename timestamp:", date);
+
+            // Use html2canvas to capture the element
+            html2canvas(captureElement, {
+                useCORS: true, // Enable cross-origin images
+                logging: true, // Enable logging for debugging
+                scale: 2, // Increase resolution for better quality
+            })
+                .then(canvas => {
+                    console.log("Canvas created successfully:", canvas);
+
+                    // Convert canvas to image
+                    const image = canvas.toDataURL('image/png');
+                    console.log("Image data URL generated:", image);
+
+                    // Create a download link
+                    const a = document.createElement('a');
+                    a.setAttribute('download', `my-tshirt-design-${date}.png`);
+                    a.setAttribute('href', image);
+
+                    // Trigger the download
+                    a.click();
+                    console.log("Screenshot captured and downloaded successfully.");
+                })
+                .catch(error => {
+                    console.error("Failed to capture screenshot:", error);
+                });
+            break;
+
+        default:
+            console.warn(`Unsupported tab name: ${tabName}`);
+            break;
+    }
 };
 
 export const reader = file =>
